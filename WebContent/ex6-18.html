@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var clearDate = function(){
+	var elP = document.getElementById( "demo" );
+	elP.innerHTML = "";		
+}
+
+var displayDate = function(){
+	var d = new Date();
+	var dates = (d.getYear() + 1900) + "-" + 
+	            (d.getMonth() + 1) + "-" +
+	            d.getDate() + " " +
+	            d.getHours() + ":" +
+	            d.getMinutes() + ":" +
+	            d.getSeconds();
+	
+	var elP = document.getElementById( "demo" );
+	elP.innerHTML = dates;
+}
+
+window.addEventListener( "load", function(){
+
+	console.log( "DOM Loaded" );
+	var elButton = document.getElementById( "myBtn" );
+
+	elButton.ondblclick = function(){
+		console.log( "dblclick" );
+	}
+	
+	elButton.onclick = function(){
+		console.log( "click" );
+	}
+	
+	elButton.onmousedown = function(){
+		console.log( "mousedown" );
+	}	
+	
+	elButton.onmouseup = function(){
+		console.log( "mouseup" );
+	}	
+
+	elButton.onmouseover = function(){
+		console.log( "mouseover" );
+		displayDate();
+	}
+	
+	elButton.onmouseout = function(){
+		console.log( "mouseout" );
+		clearDate();
+	}
+});
+
+window.addEventListener( "unload", function(){
+	console.log( "unloaded" );
+});
+
+</script>
+
+</head>
+
+<body>
+	<p>버튼을 클릭하면  <em>displayDate()</em> 함수가 실행 됩니다.</p>
+	<button id="myBtn">Try it</button>
+	<p id="demo"></p>
+	</body>
+</html>

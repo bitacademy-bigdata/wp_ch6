@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script>
+	// 기본 객체(데이터) 타입
+	var s = "Hello World";
+	var c = 'A';
+	var i = 10;
+	var pi = 3.14;
+	var b = true;
+	var f = function() {};
+	var a = [];
+	var o = {};
+	var u;
+	var n = null;
+	
+	console.log( typeof s );
+	console.log( typeof c );
+	console.log( typeof i );
+	console.log( typeof pi );
+	console.log( typeof b );
+	console.log( typeof f );
+	console.log( typeof a );
+	console.log( typeof o );
+	console.log( typeof u );
+	console.log( typeof n );
+	
+	console.log( "===================================")
+	
+	var s2 = new String( "Hello World" );
+	var i2 = new Number( 10 );
+	var b2 = new Boolean( true );
+	var o2 = new Object();
+	
+	console.log( typeof s2 );
+	console.log( typeof i2 );
+	console.log( typeof b2 );
+	console.log( typeof o2 );
+
+	console.log( "===================================")
+
+	console.log( s.toUpperCase() );
+	console.log( s2.toUpperCase() );
+
+	console.log( "===================================")
+
+	//null, undefined
+	var v1, v2 = null;
+	
+	console.log( v1 + "," + v2 );
+	console.log( v1 == v2 );
+	console.log( v1 === v2 );
+	
+	console.log( "2" == 2 );
+	console.log( "2" === 2 );
+	
+	console.log( "===================================")
+	
+	// 동적 타이핑
+	var v3 = "string";
+	console.log( typeof v3 );
+
+	v3 = 10;
+	console.log( typeof v3 );
+	
+</script>
+</head>
+<body>
+	<h1>자바스크립트 데이터형 테스트</h1>
+</body>
+</html> 

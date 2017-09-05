@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+<script>
+f = function(){
+	str = "hello";
+}	
+
+f();
+console.log( str ); // var 를 붙히지 않으면 전역 변수가 된다.
+
+var i = 10;
+f2 = function() {
+	for(var i = 0; i < 3; i++ ) {
+	}
+}
+
+// 전역 객체 window
+window.f2();
+console.log( window.i );
+
+var o = {};
+o.name = "kickscar";
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

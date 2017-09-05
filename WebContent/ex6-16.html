@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+//동적 파라미터
+var sum = function(){
+	var s = 0;
+	for( var i = 0; i < arguments.length; i++ ){
+		s += arguments[ i ];
+	}
+	
+	return s;
+}
+
+console.log( sum() );
+console.log( sum(10, 20) );
+console.log( sum(10, 20, 30) );
+console.log( sum(10, 20, 30, 40) );
+
+var f = function() {
+	console.log( arguments[0] );
+	console.log( arguments[1].name );
+	arguments[2]();
+}
+
+/*
+var o = { name:"둘리" };
+var f3 = function() {
+	console.log( "Hello" );	
+}
+f( 10, o, f3 );
+*/
+
+f( 10, {
+	name: "둘리"
+}, function(){
+	console.log( "Hello" );
+});
+
+(function( a ){
+	console.log( "Hello2" + a );
+	console.log( "Hello2" + a );
+	console.log( "Hello2" + a );
+	console.log( "Hello2" + a );
+})( 10 );
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

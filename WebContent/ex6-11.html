@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+// string 객체 주요 함수
+var str = "string1 string2 string3"; 
+
+//길이
+console.log( str.length );
+
+//검색
+var index = str.indexOf( "string2" );
+console.log( index );
+
+//서브스트링
+console.log( str.substr( index ) );
+console.log( str.substr( index, 10 ) );
+console.log( str.substring( index, 10 ) );
+
+// str은 immutable(변경이 되지 않는다)
+console.log( str );
+
+//split
+var s = str.split( " " );
+console.log( s );
+
+//encoding
+var url 
+= "http://mysite.com/board?search=안대혁&email=kickscar@gmail";
+
+// escape() <- deprecated
+console.log( escape(url) );
+console.log( 
+ "http://mysite.com/board?" + 
+ "search=" + escape("안대혁") + 
+ "&email=" + escape("kickscar@gmail") );
+
+console.log( encodeURI(url) );
+
+// setTimeout(function(){
+//	location.href = url; 
+//}, 3000);
+
+</script>
+</head>
+<body>
+</body>
+</html>
